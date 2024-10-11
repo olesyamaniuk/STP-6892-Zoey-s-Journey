@@ -817,7 +817,7 @@ a {
   align-items: center;
   gap: 25px;
 }
-.about-image-top {
+.about-image-top-1 {
   display: none;
 }
 .about__title {
@@ -830,6 +830,9 @@ a {
   padding: 0 20px;
 }
 @media screen and (min-width: 1200px) {
+  .about-image-top-1 {
+    display: flex;
+  }
   .about_section {
     display: flex;
     flex-direction: row;
