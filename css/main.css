@@ -333,10 +333,12 @@ a {
 }
 
 .home {
-  background-image: url("../images/hero/Block-phone.png");
+  /* background-image: url("../images/hero/Block-phone.png"); */
+  background-image: url("../images/hero/Block-phone-couple.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  /* height: 1000px; */
 }
 @media screen and (min-width: 1200px) {
   .home {
@@ -410,10 +412,14 @@ a {
   }
 }
 
-.home__image-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+.home-image-container {
+  visibility: hidden;
+}
+
+.home-image {
+  position: relative;
+  top: 0;
+  right: 0;
   height: auto;
 }
 @media screen and (min-width: 1200px) {
@@ -594,11 +600,16 @@ a {
 }
 
 .gallery {
-  background-image: url("../images/gallery/Gallery.png");
+  background-image: url("../images/gallery/Gallery-phone.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding-block: 60px;
+}
+@media screen and (min-width: 500px) {
+  .gallery {
+    background-image: url("../images/gallery/Gallery.png");
+  }
 }
 @media screen and (min-width: 1200px) {
   .gallery {
@@ -631,23 +642,74 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   align-items: center;
-  margin: 40px;
-  width: 400px;
+  /* margin: 20px; */
+  width: 360px;
+  gap: 24px;
 }
 .reviews__item {
   margin: 20px;
   width: 386px;
   height: 252px;
-  padding: 40px;
-  gap: 10px;
   border-radius: 8px;
   border: 1px;
   opacity: 0px;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(61, 222, 253, 1);
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  width: 335px;
+  height: 200px;
+  padding: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .reviews__item {
+    margin: 20px;
+    width: 386px;
+    height: 252px;
+    padding: 40px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(61, 222, 253, 1);
+    display: flex;
+    align-items: center;
+  }
+  .reviews-avatar-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .reviews-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 173, 187, 0.2);
+  }
+  .reviews-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviews-name {
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+  }
+  .reviews-quote {
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: rgba(41, 42, 43, 1);
+  }
+}
+
 .reviews-avatar-info {
   display: flex;
   flex-direction: row;
@@ -667,23 +729,25 @@ a {
 }
 .reviews-name {
   font-family: Outfit;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 28px;
   text-align: left;
 }
 .reviews-quote {
   font-family: Outfit;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 24px;
   text-align: left;
+
   color: rgba(41, 42, 43, 1);
 }
 .reviews__button-container {
   display: none;
 }
 .reviews__container {
+  margin-left: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -691,14 +755,14 @@ a {
 .reviews__button--right {
   position: relative;
   top: 15px;
-  left: -100px;
+  left: -70px;
 }
 @media screen and (min-width: 1000px) {
   .reviews__list {
-    width: 820px;
+    width: 750px;
   }
   .reviews__button--right {
-    left: -85px;
+    left: -75px;
   }
 }
 @media screen and (min-width: 1210px) {
@@ -708,16 +772,24 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .reviews__list {
+    width: 820px;
+  }
+  .reviews__button--right {
+    left: -100px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .reviews__list {
+    gap: 35px;
     width: 1250px;
   }
   .reviews__button--right {
     position: relative;
-    left: -135px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 15px;
+    left: -95px;
   }
 }
 .gallery__item {
